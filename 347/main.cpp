@@ -4,25 +4,25 @@ using namespace std;
 
 int main()
 {
-    int n, s=0, nr_max, nr, i, nr_min;
+    int n, nr_max, nr, i, nr_min;
     cin >> n;
-    cin >> nr_max;
+    cin >> nr_min;
+    nr_max = nr_min;
+
     for (i=1; i<n; i++)
     {
         cin >> nr;
-        if (nr < nr_max)
+        if(nr < nr_min)
         {
-            nr = nr_min;
+            nr_min = nr;
         }
-        else
+        if (nr > nr_max)
         {
-            nr = nr_max;
+            nr_max = nr;
         }
-
-        s = nr_min + nr_max;
     }
 
-    cout << s << endl;
+    cout << nr_min + nr_max << endl;
     return 0;
 
 }
