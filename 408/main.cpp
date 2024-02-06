@@ -18,18 +18,10 @@ int main()
         {
             D=D+2;
         }
-
-
     if(d*d==ogl)
     {
         D++;
     }
-
-
-
-
-
-
     cout<<D;
 
     return 0;
