@@ -82,6 +82,8 @@ int main()
         c[k++]=b[j++];
     }
 
+
+
     cout<<"a: ";
     for(i=0; i<n; i++)
         cout<<a[i]<<" ";
