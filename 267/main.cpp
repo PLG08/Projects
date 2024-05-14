@@ -3,21 +3,26 @@
 using namespace std;
 ifstream fin ("unice.in");
 ofstream fout ("unice.out");
-int fr[100000] = {0}, i, x, j;
+int fr[100] = {0}, i, x, j;
 int main()
 {
     int n;
 
     fin >> n;
+    for (i=1; i<=n; i++) {
+        fin >> x;
+        fr[x]++;
+    }
 
-    while(fin>>x)
-       fr[x]++;
-    for(j=0;j<=99;j++)
-        {
-            if(fr[j]==1) fout << j << " ";
-        }
+    for (i=0; i<=99; i++) {
+        if(fr[i] == 1)
+            fout << i << " ";
+    }
 
-    return 0;
+
+
     fin.close();
     fout.close();
+    return 0;
+
 }
